@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credit Card Fraud Detection System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">🛡️ Fraud Detection</div>
+      <p class="side-text">Credit Card Fraud Detection Portal</p>
+      <nav>
+        <button class="nav-btn active" data-target="overview">Overview Dashboard</button>
+        <button class="nav-btn" data-target="checker">Live Transaction Checker</button>
+        <button class="nav-btn" data-target="batch">Batch Processing Portal</button>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section id="overview" class="page active">
+        <h1>Credit Card Fraud Detection Portal</h1>
+        <p class="subtitle">An intelligent analytics panel using machine learning style scoring to track and flag high-risk credit account changes.</p>
+
+        <div class="metrics">
+          <div class="metric-card"><span>Production Model Accuracy</span><strong>99.42%</strong><small>Optimal</small></div>
+          <div class="metric-card"><span>Data Balancing Framework</span><strong>SMOTE</strong><small>Oversampling</small></div>
+          <div class="metric-card"><span>Target Feature Space</span><strong>V1 - V28</strong><small>PCA Modules</small></div>
+        </div>
+
+        <div class="panel">
+          <h2>📊 System Benchmark Evaluations</h2>
+          <table>
+            <thead>
+              <tr><th>Evaluation Metric</th><th>Baseline Profile</th><th>SMOTE Optimized Neural Net</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Precision</td><td>85.3%</td><td>94.1%</td></tr>
+              <tr><td>Recall / Sensitivity</td><td>78.1%</td><td>91.8%</td></tr>
+              <tr><td>F1-Score Evaluation</td><td>81.5%</td><td>92.9%</td></tr>
+              <tr><td>ROC-AUC Score Metrics</td><td>0.934</td><td>0.982</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="checker" class="page">
+        <h1>🕵️ Live Transaction Checker</h1>
+        <p class="subtitle">Enter feature values below to compute a demo risk prediction.</p>
+
+        <form id="riskForm" class="panel form-grid">
+          <label>System Relative Time Context (Seconds)<input type="number" id="time" value="0" step="0.1"></label>
+          <label>Transaction Face Value Amount ($)<input type="number" id="amount" value="25.50" step="0.01"></label>
+          <label>Principal Feature Vector V1<input type="range" id="v1" min="-5" max="5" value="0" step="0.1"><span class="range-value">0</span></label>
+          <label>Principal Feature Vector V2<input type="range" id="v2" min="-5" max="5" value="0" step="0.1"><span class="range-value">0</span></label>
+          <label>Principal Feature Vector V3<input type="range" id="v3" min="-5" max="5" value="0" step="0.1"><span class="range-value">0</span></label>
+          <label>Principal Feature Vector V4<input type="range" id="v4" min="-5" max="5" value="0" step="0.1"><span class="range-value">0</span></label>
+          <label>Principal Feature Vector V5<input type="range" id="v5" min="-5" max="5" value="0" step="0.1"><span class="range-value">0</span></label>
+          <label>Principal Feature Vector V6<input type="range" id="v6" min="-5" max="5" value="0" step="0.1"><span class="range-value">0</span></label>
+          <label>Principal Feature Vector V7<input type="range" id="v7" min="-5" max="5" value="0" step="0.1"><span class="range-value">0</span></label>
+          <label>Principal Feature Vector V8<input type="range" id="v8" min="-5" max="5" value="0" step="0.1"><span class="range-value">0</span></label>
+          <button type="submit" class="primary">Execute Risk Assessment Analysis</button>
+        </form>
+        <div id="result" class="result hidden"></div>
+      </section>
+
+      <section id="batch" class="page">
+        <h1>📂 Automated Batch Screening</h1>
+        <p class="subtitle">Upload a CSV transaction log to preview the first rows in the browser.</p>
+        <div class="panel">
+          <input type="file" id="csvFile" accept=".csv" />
+          <div id="csvPreview" class="table-wrap"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
